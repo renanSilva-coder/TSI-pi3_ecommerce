@@ -1,0 +1,10 @@
+Categories 
+
+Pra tudo é palavra em inglês no plural
+toda vez que eu tiver trabalhando com um produto é sem s
+
+Aonde da mais problema é na model
+
+Na hora de criar as coisas com o artisan é tudo com s com exceção da model.
+
+Se eu quiser fazer uma alteração na tabela é bom que eu faça bem no incio quando eu for criar ela, que aí se eu errei algum nome na hora de criar ou criei ela sem alguma coluna, da uma php artisan migrate:roolback e volta esse passo , vc corrige no código e roda php artisan migrate corretamente. 

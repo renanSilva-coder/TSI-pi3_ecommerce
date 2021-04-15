@@ -1,0 +1,45 @@
+php artisan breeze:install
+
+npm install
+
+npm run dev
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//Product
+Route::resource('/product', ProductsController::class);
+
+//Category
+Route::resource('/category', CategoriesController::class);
+
+//Tags
+Route::resource('/tag', TagController::class);
+
+na pasta layouts
+
+cria um arquivo com o codigo que vc quer repetir 
+na pagina onde iria o codigo vc coloca @include('layouts.arquivo')
+
+
+php artisan make:migration add_relation_product_and_category --table=products
+
+
+Boa noite professor, tudo bem ? 
+Vou mandar uma dúvida aqui agr pq se não posso esquecer
+
+Neste código:
+    public function index(){
+        return view('product.index')->with('produtos', Product::all());
+    }
+Quando eu passo dados do banco usando o with assim, com 'produtos', Product::all() , e sem parâmetros na função, estou pegando os dados de todos os produtos, pego todos os registros da tabela,
+
+E neste código:
+public function edit(Product $product){
+        return view('product.edit')->with(['product'=>$product, 'categories'=>Category::all()]);
+}
+Quando se usa  o with com 'product'=>$product, e com parâmetro Product $product, estou pegando qualquer registro completo do banco, ou seja, um produto qualquer do banco com todos seus dados.
+
+É certo dizer que os dois modos de usar são a mesma coisa, ou como disse acima, tem essa diferença?
+
